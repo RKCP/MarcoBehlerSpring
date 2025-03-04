@@ -25,6 +25,7 @@ replay_pid*
 
 # idea folder
 .idea/
+*.iml
 
 # ds store
 .DS_Store
