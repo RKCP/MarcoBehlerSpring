@@ -1,4 +1,4 @@
-package com.raphaelpeters;
+package com.raphaelpeters.myfancypdfinvoices.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

@@ -1,5 +1,6 @@
-package com.raphaelpeters;
+package com.raphaelpeters.myfancypdfinvoices;
 
+import com.raphaelpeters.myfancypdfinvoices.web.MyInvoicesServlet;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.Wrapper;

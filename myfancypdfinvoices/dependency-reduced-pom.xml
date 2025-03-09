@@ -22,7 +22,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.raphaelpeters.ApplicationLauncher</mainClass>
+                  <mainClass>com.raphaelpeters.myfancypdfinvoices.ApplicationLauncher</mainClass>
                 </transformer>
               </transformers>
             </configuration>

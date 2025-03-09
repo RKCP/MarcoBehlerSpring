@@ -1,6 +1,8 @@
-package com.raphaelpeters;
+package com.raphaelpeters.myfancypdfinvoices.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.raphaelpeters.myfancypdfinvoices.model.Invoice;
+import com.raphaelpeters.myfancypdfinvoices.service.InvoiceService;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

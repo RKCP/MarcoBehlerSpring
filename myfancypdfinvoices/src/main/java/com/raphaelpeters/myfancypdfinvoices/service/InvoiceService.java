@@ -1,4 +1,6 @@
-package com.raphaelpeters;
+package com.raphaelpeters.myfancypdfinvoices.service;
+
+import com.raphaelpeters.myfancypdfinvoices.model.Invoice;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
