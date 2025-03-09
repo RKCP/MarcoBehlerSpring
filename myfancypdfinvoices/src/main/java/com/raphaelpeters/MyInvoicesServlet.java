@@ -8,6 +8,8 @@ import java.io.IOException;
 
 public class MyInvoicesServlet extends HttpServlet {
 
+    private final InvoiceService invoiceService = new InvoiceService();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         if (request.getRequestURI().equalsIgnoreCase("/")) {
@@ -21,11 +23,14 @@ public class MyInvoicesServlet extends HttpServlet {
                             "</html>");
         } else if (request.getRequestURI().equalsIgnoreCase("/invoices")) {
             response.setContentType("application/json; charset=UTF-8");
-            response.getWriter().print("[empty json]");
+            response.getWriter().print(invoiceService.create("777", 7070));
         }
-
-
     }
+
+//    @Override
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//        if (request.c)
+//    }
 
 
 }

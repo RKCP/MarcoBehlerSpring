@@ -1,2 +1,4 @@
-com/raphaelpeters/MyServlet.class
+com/raphaelpeters/MyInvoicesServlet.class
+com/raphaelpeters/Invoice.class
+com/raphaelpeters/InvoiceService.class
 com/raphaelpeters/ApplicationLauncher.class
