@@ -1,4 +1,7 @@
-com/raphaelpeters/MyInvoicesServlet.class
-com/raphaelpeters/Invoice.class
-com/raphaelpeters/InvoiceService.class
-com/raphaelpeters/ApplicationLauncher.class
+com/raphaelpeters/myfancypdfinvoices/ApplicationLauncher.class
+com/raphaelpeters/myfancypdfinvoices/service/InvoiceService.class
+com/raphaelpeters/myfancypdfinvoices/model/Invoice.class
+com/raphaelpeters/myfancypdfinvoices/web/MyInvoicesServlet.class
+com/raphaelpeters/myfancypdfinvoices/context/Application.class
+com/raphaelpeters/myfancypdfinvoices/model/User.class
+com/raphaelpeters/myfancypdfinvoices/service/UserService.class

@@ -1,6 +1,7 @@
 package com.raphaelpeters.myfancypdfinvoices.service;
 
 import com.raphaelpeters.myfancypdfinvoices.model.Invoice;
+import com.raphaelpeters.myfancypdfinvoices.model.User;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -14,9 +15,13 @@ public class InvoiceService {
     }
 
     public Invoice create(String userId, Integer amount) {
+        User user = new UserService().findById(userId);
+        if (user == null) {
+            throw new IllegalStateException();
+        }
+
         // real PDF creation later
-        Invoice invoice = new Invoice("",
-                userId,
+        Invoice invoice = new Invoice(userId,
                 "http://www.africau.edu/images/default/sample.pdf",
                 amount);
 
