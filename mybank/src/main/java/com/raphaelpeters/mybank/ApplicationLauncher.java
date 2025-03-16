@@ -8,9 +8,14 @@ import com.raphaelpeters.mybank.web.TransactionServlet;
 
 public class ApplicationLauncher {
     public static void main(String[] args) {
+        int serverPort = 8090;
+        String portProperty = System.getProperty("server.port");
+        if (portProperty != null) {
+            serverPort = Integer.parseInt(portProperty);
+        }
 
         Tomcat tomcat = new Tomcat();
-        tomcat.setPort(8090);
+        tomcat.setPort(serverPort);
         tomcat.getConnector();
 
         Context ctx = tomcat.addContext("", null);
