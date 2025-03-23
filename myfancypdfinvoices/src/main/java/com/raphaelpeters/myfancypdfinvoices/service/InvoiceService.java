@@ -2,6 +2,7 @@ package com.raphaelpeters.myfancypdfinvoices.service;
 
 import com.raphaelpeters.myfancypdfinvoices.model.Invoice;
 import com.raphaelpeters.myfancypdfinvoices.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -9,12 +10,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @Component
 public class InvoiceService {
 
-    private final UserService userService;
+    @Autowired
+    private UserService userService;
     List<Invoice> invoiceList = new CopyOnWriteArrayList<>();
-
-    public InvoiceService(UserService userService) {
-        this.userService = userService;
-    }
 
     public List<Invoice> getInvoiceList() {
         return invoiceList;
