@@ -10,9 +10,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @Component
 public class InvoiceService {
 
-    @Autowired
-    private UserService userService;
     List<Invoice> invoiceList = new CopyOnWriteArrayList<>();
+    private UserService userService;
 
     public List<Invoice> getInvoiceList() {
         return invoiceList;
@@ -31,5 +30,10 @@ public class InvoiceService {
 
         invoiceList.add(invoice);
         return invoice;
+    }
+
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 }
