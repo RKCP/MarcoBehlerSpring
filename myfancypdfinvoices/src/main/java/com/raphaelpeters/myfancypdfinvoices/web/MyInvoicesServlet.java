@@ -23,6 +23,10 @@ public class MyInvoicesServlet extends HttpServlet {
     public void init() {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(
                 MyFancyPdfInvoicesApplicationConfiguration.class);
+
+        ctx.registerShutdownHook(); // whenver you terminate, or JVM about to stop,
+        // Spring properly shuts down applicationContextFIrst and calls @PreDestroy methods
+
         this.userService = ctx.getBean(UserService.class);
         this.objectMapper = ctx.getBean(ObjectMapper.class);
         this.invoiceService = ctx.getBean(InvoiceService.class);

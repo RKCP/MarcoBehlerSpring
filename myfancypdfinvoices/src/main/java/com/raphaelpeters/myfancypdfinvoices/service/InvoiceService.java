@@ -2,6 +2,8 @@ package com.raphaelpeters.myfancypdfinvoices.service;
 
 import com.raphaelpeters.myfancypdfinvoices.model.Invoice;
 import com.raphaelpeters.myfancypdfinvoices.model.User;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -9,6 +11,12 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 @Component
 public class InvoiceService {
+
+    @PostConstruct
+    public void init() {
+        System.out.println("Fetching PDF Tempalte from S3...");
+        // TODO download from s3 and save locally
+    }
 
     List<Invoice> invoiceList = new CopyOnWriteArrayList<>();
     private final UserService userService;
@@ -34,5 +42,11 @@ public class InvoiceService {
 
         invoiceList.add(invoice);
         return invoice;
+    }
+
+    @PreDestroy
+    public void shutdown() {
+        System.out.println("Deleting downloaded templates...");
+        // TODO actual deletion of PDFs
     }
 }
