@@ -14,6 +14,7 @@ import org.springframework.context.annotation.*;
 // At its core, a meta-annotation is an annotation that annotates another annotation. It acts as a wrapper, allowing for the bundling of multiple annotations under one umbrella. You can custom-make these.
 @Configuration
 @PropertySource("classpath:/application.properties")
+@PropertySource(value = "classpath:/application-${spring.profiles.active}.properties", ignoreResourceNotFound = true) // property at bottom has highest precedence, and overrites properties in above @PropertySource
 public class MyFancyPdfInvoicesApplicationConfiguration {
 
     @Bean
