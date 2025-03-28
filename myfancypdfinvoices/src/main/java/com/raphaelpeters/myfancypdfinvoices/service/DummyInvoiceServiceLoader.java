@@ -1,5 +1,6 @@
 package com.raphaelpeters.myfancypdfinvoices.service;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ public class DummyInvoiceServiceLoader {
         this.invoiceService = invoiceService;
     }
 
+    @PostConstruct
     public void setup() {
         System.out.println("Creating dev invoices...");
         invoiceService.create("someUserId", 50);
