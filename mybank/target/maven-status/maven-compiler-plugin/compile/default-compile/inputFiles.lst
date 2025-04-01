@@ -1,3 +1,4 @@
+/Users/raphael/Documents/github/MarcoBehlerSpring/mybank/src/main/java/com/raphaelpeters/mybank/context/MyBankApplicationConfiguration.java
 /Users/raphael/Documents/github/MarcoBehlerSpring/mybank/src/main/java/com/raphaelpeters/mybank/web/TransactionServlet.java
 /Users/raphael/Documents/github/MarcoBehlerSpring/mybank/src/main/java/com/raphaelpeters/mybank/model/Transaction.java
 /Users/raphael/Documents/github/MarcoBehlerSpring/mybank/src/main/java/com/raphaelpeters/mybank/service/TransactionService.java

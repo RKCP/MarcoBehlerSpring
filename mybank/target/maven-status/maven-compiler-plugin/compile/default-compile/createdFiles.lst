@@ -1,3 +1,4 @@
+com/raphaelpeters/mybank/context/MyBankApplicationConfiguration.class
 com/raphaelpeters/mybank/web/TransactionServlet.class
 com/raphaelpeters/mybank/service/TransactionService.class
 com/raphaelpeters/mybank/model/Transaction.class
